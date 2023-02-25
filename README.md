@@ -24,3 +24,7 @@
    ```
 
    подробнее описано здесь: https://docs.djangoproject.com/en/4.1/ref/databases/#postgresql-notes
+3. Создать приложение Django:
+   ```
+   python manage.py startapp blog
+   ```
