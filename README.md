@@ -16,3 +16,11 @@
    ```
    django-admin startproject mysite
    ```
+
+   подробнее описано здесь: https://docs.djangoproject.com/en/4.1/intro/tutorial01/
+2. Создать таблицы для проекта в PostgreSQL:
+   ```
+   python manage.py migrate
+   ```
+
+   подробнее описано здесь: https://docs.djangoproject.com/en/4.1/ref/databases/#postgresql-notes
