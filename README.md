@@ -10,3 +10,9 @@
    ```
    pip install psycopg2 --upgrade
    ```
+## Django
+
+1. Создать проект Django:
+   ```
+   django-admin startproject mysite
+   ```
