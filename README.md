@@ -28,3 +28,5 @@
    ```
    python manage.py startapp blog
    ```
+
+   подробнее здесь: https://docs.djangoproject.com/en/4.1/intro/tutorial01/#creating-the-polls-app
