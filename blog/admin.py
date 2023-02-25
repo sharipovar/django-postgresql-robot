@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import User, Topic, Message
+
+admin.site.register([User, Topic, Message])

@@ -100,3 +100,11 @@
      In [7]: User.objects.all()
      Out[7]: <QuerySet [<User: User object (1)>]>
      ```
+   
+   подробнее здесь: https://docs.djangoproject.com/en/4.1/intro/tutorial02/#activating-models
+5. Создать пользователя admin:
+   ```
+   python manage.py createsuperuser
+   ```
+
+   подробнее здесь: https://docs.djangoproject.com/en/4.1/intro/tutorial02/#introducing-the-django-admin
