@@ -132,3 +132,9 @@
    ```
 
    подробнее здесь: https://docs.djangoproject.com/en/4.1/intro/tutorial02/#introducing-the-django-admin
+
+## Тестирование
+1. Запуск тестов [TestSuite.robot](TestSuite.robot)
+   ```
+   robot TestSuite.robot
+   ```
