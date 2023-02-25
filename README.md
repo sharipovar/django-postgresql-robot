@@ -10,6 +10,24 @@
    ```
    pip install psycopg2 --upgrade
    ```
+5. Установить [Robot Framework](https://robotframework.org/)
+   ```
+   pip install robotframework
+   ```
+   - Библиотека [SeleniumLibrary](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html)
+     ```
+     pip install robotframework-seleniumlibrary --upgrade
+     ```
+   - Библиотека [RequestsLibrary](https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html)
+     ```
+     pip install robotframework-requests
+     ```
+   - Библиотека [JSONLibrary](https://robotframework-thailand.github.io/robotframework-jsonlibrary/JSONLibrary.html)
+     ```
+     pip install robotframework-jsonlibrary
+     ```
+   
+   подробнее здесь: https://testersdock.com/api-testing-robot-framework/
 ## Django
 
 1. Создать проект Django:
