@@ -28,6 +28,7 @@
      ```
    
    подробнее здесь: https://testersdock.com/api-testing-robot-framework/
+6. Установить [Postman](https://www.postman.com/downloads/)
 ## Django
 
 1. Создать проект Django:
