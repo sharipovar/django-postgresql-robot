@@ -13,14 +13,14 @@ from django.http import HttpResponse
 
 
 
-"""  
+"""
 def index(request):
     return HttpResponse("Главная")
  
 def about(request):
     return HttpResponse("О сайте")
 
-"""    
+"""   
  
 def contact(request):
     return HttpResponse("Контакты")
@@ -32,6 +32,8 @@ def mir(request,first,second):
             <p>второй: {second}</p>
     """)
 
+
+
 def mir2(request):
     return HttpResponse("Здравствуй, МИР!!!")
 
@@ -42,14 +44,14 @@ def mir3(request):
     return HttpResponse(output)
 
 
-def stih(request):
-    """
-    output="<h2>Привет, МИР!!!</h2> "
-    return HttpResponse(output)
-    """
+
+def stishok(request):
+    
     with open('stishok.txt', 'r') as file:
         read_file = file.read()
     return HttpResponse(read_file)
+
+
 
 def index(request):
     return HttpResponse("<h2>Главная</h2>")

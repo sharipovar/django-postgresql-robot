@@ -37,7 +37,7 @@ urlpatterns = [
 
 #    re_path(r'^stih', views.stih),
 
-    path('stih', views.stih),
+    path('stishok', views.stishok),
 
 
 ]
