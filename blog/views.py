@@ -37,8 +37,10 @@ def message(request, message_id):
         raise Http404("Message does not exist")
     return JsonResponse({ 
         'id': message.id, 
-        'user': serialize('json', [message.user]), 
-        'topic': serialize('json', [message.topic]),
+        # 'user': serialize('json', [message.user]), 
+        # 'topic': serialize('json', [message.topic]),
+        'user': str(message.user), 
+        'topic': str(message.topic),
         'text': message.text,
         'created_at': message.created_at
     })
