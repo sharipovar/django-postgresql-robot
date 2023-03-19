@@ -53,4 +53,11 @@ urlpatterns = [
     path("oppar3", views.oppar3),
     path("oppar3/<name>", views.oppar3),
     path("oppar3/<name>/<int:age>", views.oppar3),
+
+    re_path(r"^oppar4/(?P<name>\D+)/(?P<age>\d+)", views.oppar4),
+
+    re_path(r"^oppar4_1/(?P<name>\D+)/(?P<age>\d+)", views.oppar4_1),
+    re_path(r"^oppar4_1/(?P<name>\D+)", views.oppar4_1),
+    re_path(r"^oppar4_1", views.oppar4_1),
+
 ]
