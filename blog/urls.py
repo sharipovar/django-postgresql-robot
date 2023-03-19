@@ -48,4 +48,9 @@ urlpatterns = [
     path('', views.index),
     path("oppar/<str:name>", views.oppar),
     path("oppar1/<name>/<int:age>", views.oppar1),
+
+
+    path("oppar3", views.oppar3),
+    path("oppar3/<name>", views.oppar3),
+    path("oppar3/<name>/<int:age>", views.oppar3),
 ]

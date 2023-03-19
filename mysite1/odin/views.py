@@ -66,3 +66,5 @@ def oppar(request, name):
 def oppar1(request, name, age):
     return HttpResponse(f"<h2>Имя: {name}  Возраст:{age}</h2>")
 
+def oppar3(request, name="Undefined", age =0):
+    return HttpResponse(f"<h2>Имя: {name}  Возраст: {age}</h2>")
