@@ -11,16 +11,13 @@ from django.http import HttpResponse
 
 
 
-
-
-"""
 def index(request):
     return HttpResponse("Главная")
  
 def about(request):
     return HttpResponse("О сайте")
 
-"""   
+  
  
 def contact(request):
     return HttpResponse("Контакты")
@@ -56,11 +53,16 @@ def stishok(request):
 def index(request):
     return HttpResponse("<h2>Главная</h2>")
   
-def about(request, name, age):
+def about1(request, name, age):
     return HttpResponse(f"""
             <h2>О пользователе</h2>
             <p>Имя: {name}</p>
             <p>Возраст: {age}</p>
     """)    
+
+def oppar(request, name):
+    return HttpResponse(f"<h2>Имя: {name}</h2>")
     
+def oppar1(request, name, age):
+    return HttpResponse(f"<h2>Имя: {name}  Возраст:{age}</h2>")
 

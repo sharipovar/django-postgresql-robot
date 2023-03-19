@@ -39,13 +39,13 @@ urlpatterns = [
 
     path('stishok', views.stishok),
 
+    path('about1', views.about1, kwargs={"name":"Tom", "age": 38}),
 
-]
-"""
+
 
   
-urlpatterns = [
+
     path('', views.index),
-    path('about', views.about, kwargs={"name":"Tom", "age": 38}),
+    path("oppar/<str:name>", views.oppar),
+    path("oppar1/<name>/<int:age>", views.oppar1),
 ]
-"""
