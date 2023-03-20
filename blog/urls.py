@@ -1,4 +1,4 @@
-from django.urls import path, re_path
+from django.urls import path, re_path, include
 
 from . import views
 
@@ -61,3 +61,16 @@ urlpatterns = [
     re_path(r"^oppar4_1", views.oppar4_1),
 
 ]
+
+product_patterns = [
+    path("", views.products),
+    path("new", views.new),
+    path("top", views.top),
+]
+ 
+urlpatterns = [
+    path("", views.index),
+    path("products/", include(product_patterns)),
+]
+
+

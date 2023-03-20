@@ -75,3 +75,12 @@ def oppar4(request, name, age):
 def oppar4_1(request, name="Undefined", age =0):
     return HttpResponse(f"<h2>Имя: {name}  Возраст: {age}</h2>")
 
+def products(request):
+    return HttpResponse("Список товаров")
+ 
+def new(request):
+    return HttpResponse("Новые товары")
+ 
+def top(request):
+    return HttpResponse("Наиболее популярные товары")
+
