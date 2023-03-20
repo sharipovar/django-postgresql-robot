@@ -22,7 +22,7 @@ urlpatterns = [
     
 ]
 """
-"""
+
 
 urlpatterns = [
     path('', views.index),
@@ -61,7 +61,7 @@ urlpatterns = [
     re_path(r"^oppar4_1", views.oppar4_1),
 
 ]
-
+"""
 #Гл.2, часть 6_1
 
 product_patterns = [
@@ -75,7 +75,7 @@ urlpatterns = [
     path("products/", include(product_patterns)),
 ]
 
-"""
+
 
 #Гл.2, часть 6_2
 
@@ -89,6 +89,16 @@ urlpatterns = [
     path("", views.index),
     path("products/<int:id>/", include(product_patterns)),
 ]
+"""
+
+#Гл.2, часть 7
+
+urlpatterns = [
+    path("", views.index),
+    path("user/", views.user)
+]
+
+
 
 
 
