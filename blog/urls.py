@@ -22,7 +22,7 @@ urlpatterns = [
     
 ]
 """
-
+"""
 
 urlpatterns = [
     path('', views.index),
@@ -42,7 +42,7 @@ urlpatterns = [
     path('about1', views.about1, kwargs={"name":"Tom", "age": 38}),
 
 
-
+#Гл.2, часть 5
   
 
     path('', views.index),
@@ -62,6 +62,8 @@ urlpatterns = [
 
 ]
 
+#Гл.2, часть 6_1
+
 product_patterns = [
     path("", views.products),
     path("new", views.new),
@@ -72,5 +74,22 @@ urlpatterns = [
     path("", views.index),
     path("products/", include(product_patterns)),
 ]
+
+"""
+
+#Гл.2, часть 6_2
+
+product_patterns = [
+    path("", views.products),
+    path("comments", views.comments),
+    path("questions", views.questions),
+]
+ 
+urlpatterns = [
+    path("", views.index),
+    path("products/<int:id>/", include(product_patterns)),
+]
+
+
 
 

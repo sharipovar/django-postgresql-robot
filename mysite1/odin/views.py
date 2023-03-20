@@ -46,7 +46,7 @@ def stishok(request):
     
     with open('stishok.txt', 'r') as file:
         read_file = file.read()
-    return HttpResponse(read_file)
+    return (read_file)
 
 
 
@@ -59,6 +59,8 @@ def about1(request, name, age):
             <p>Имя: {name}</p>
             <p>Возраст: {age}</p>
     """)    
+
+#Гл.2, часть 5
 
 def oppar(request, name):
     return HttpResponse(f"<h2>Имя: {name}</h2>")
@@ -75,6 +77,8 @@ def oppar4(request, name, age):
 def oppar4_1(request, name="Undefined", age =0):
     return HttpResponse(f"<h2>Имя: {name}  Возраст: {age}</h2>")
 
+#Гл.2, часть 6_1
+
 def products(request):
     return HttpResponse("Список товаров")
  
@@ -83,4 +87,18 @@ def new(request):
  
 def top(request):
     return HttpResponse("Наиболее популярные товары")
+
+
+#Гл.2, часть 6_2
+
+def products(request, id):
+    return HttpResponse(f"Товар {id}")
+ 
+def comments(request, id):
+    return HttpResponse(f"Комментарии о товаре {id}")
+ 
+def questions(request, id):
+    return HttpResponse(f"Вопросы о товаре {id}")
+
+
 
