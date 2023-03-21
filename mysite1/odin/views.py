@@ -10,6 +10,7 @@ from django.http import HttpResponse
 
 
 
+"""
 
 def index(request):
     return HttpResponse("Главная")
@@ -21,6 +22,8 @@ def about(request):
  
 def contact(request):
     return HttpResponse("Контакты")
+
+"""    
 
 def mir(request,first,second):
     return HttpResponse(f"""
@@ -107,6 +110,79 @@ def user(request):
     age = request.GET.get("age", 0)
     name = request.GET.get("name", "Не известно")
     return HttpResponse(f"<h2>Имя: {name}  Возраст: {age}</h2>")
+
+
+#Гл.2, часть 8
+# переадресация 
+
+from django.http import  HttpResponseRedirect, HttpResponsePermanentRedirect 
+
+"""
+def index(request):
+    return HttpResponse("Index")
+
+"""    
+ 
+def about(request):
+    return HttpResponse("About")
+ 
+def contact(request):
+    return HttpResponseRedirect("/about")
+ 
+def details(request):
+    return HttpResponsePermanentRedirect("/")
+
+#  отправка статусных кодов
+
+def index1(request, id):
+    people = ["Tom", "Bob", "Sam"]
+    # если пользователь найден, возвращаем его
+    if id in range(0, len(people)):
+        return HttpResponse(people[id])
+    # если нет, то возвращаем ошибку 404
+    else:
+        return HttpResponseNotFound("Not Found")
+ 
+def access(request, age):
+    # если возраст НЕ входит в диапазон 1-110, посылаем ошибку 400
+    if age not in range(1, 111):
+        return HttpResponseBadRequest("Некорректные данные")
+    # если возраст больше 17, то доступ разрешен
+    if(age > 17):
+        return HttpResponse("Доступ разрешен")
+    # если нет, то возвращаем ошибку 403
+    else:
+        return HttpResponseForbidden("Доступ заблокирован: недостаточно лет")
+
+#Гл.2, часть 9
+from django.http import JsonResponse
+ 
+def index2(request):
+    return JsonResponse({"name": "Tom", "age": 38})
+
+#определение класса-сериализатора
+
+from django.http import JsonResponse
+from django.core.serializers.json import DjangoJSONEncoder
+ 
+def index3(request):
+    bob = Person("Bob", 41)
+    return JsonResponse(bob, safe=False, encoder=PersonEncoder)
+ 
+class Person:
+  
+    def __init__(self, name, age):
+        self.name = name    # имя человека
+        self.age = age        # возраст человека
+ 
+class PersonEncoder(DjangoJSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, Person):
+            return {"name": obj.name, "age": obj.age}
+            # return obj.__dict__
+        return super().default(obj)
+
+
 
 
 

@@ -23,7 +23,7 @@ urlpatterns = [
 ]
 """
 
-
+"""
 urlpatterns = [
     path('', views.index),
     path('about', views.about),
@@ -62,6 +62,8 @@ urlpatterns = [
 
 ]
 """
+"""
+
 #Гл.2, часть 6_1
 
 product_patterns = [
@@ -89,7 +91,7 @@ urlpatterns = [
     path("", views.index),
     path("products/<int:id>/", include(product_patterns)),
 ]
-"""
+
 
 #Гл.2, часть 7
 
@@ -98,8 +100,31 @@ urlpatterns = [
     path("user/", views.user)
 ]
 
+"""
+#Гл.2, часть 8
+# переадресация 
+
+urlpatterns = [
+    path("", views.index),
+    path("about/", views.about),
+    path("contact/", views.contact),
+    path("details/", views.details),
 
 
+#  отправка статусных кодов
+
+
+    path("index1/<int:id>", views.index1),
+    path("access/<int:age>", views.access),
+
+#Гл.2, часть 9
+#отправка json
+
+    path("index2/", views.index2),
+
+    path("index3/", views.index3),
+
+]
 
 
 
