@@ -155,6 +155,7 @@ def access(request, age):
         return HttpResponseForbidden("Доступ заблокирован: недостаточно лет")
 
 #Гл.2, часть 9
+
 from django.http import JsonResponse
  
 def index2(request):
@@ -181,6 +182,22 @@ class PersonEncoder(DjangoJSONEncoder):
             return {"name": obj.name, "age": obj.age}
             # return obj.__dict__
         return super().default(obj)
+    
+#Гл.2, часть 10
+
+# установка куки
+
+def set(request):
+    # получаем из строки запроса имя пользователя
+    username = request.GET.get("username", "Undefined")
+    # создаем объект ответа
+    response = HttpResponse(f"Hello {username}")
+    # передаем его в куки
+    response.set_cookie("username", username)
+    return response   
+
+
+
 
 
 

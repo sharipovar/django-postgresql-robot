@@ -124,6 +124,12 @@ urlpatterns = [
 
     path("index3/", views.index3),
 
+#Гл.2, часть 10
+# установка куки
+
+     path("set", views.set),
+
+
 ]
 
 
