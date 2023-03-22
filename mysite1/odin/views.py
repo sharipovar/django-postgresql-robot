@@ -202,10 +202,16 @@ def get(request):
     username = request.COOKIES["username"]
     return HttpResponse(f"Hello {username}")
 
+#Гл.3, часть 1 Шаблоны
 
+from django.shortcuts import render
 
-
-
+def first(request):
+    return render(request, "first.htm")
+def second(request):
+    return render(request, "second.htm")
+def third(request):
+    return render(request, "third.htm")
 
 
 

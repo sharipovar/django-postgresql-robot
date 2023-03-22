@@ -128,11 +128,16 @@ urlpatterns = [
 # установка куки
 
     path("set", views.set),
-    
+
 # получение куки    
     path("get", views.get),       
 
 ]
 
+#Гл.3, часть 1 Шаблоны
 
-
+urlpatterns = [
+    path("first/", views.first),
+    path("second/", views.second),
+    path("third/", views.third),
+]
