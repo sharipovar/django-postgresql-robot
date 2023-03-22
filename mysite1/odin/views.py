@@ -208,10 +208,13 @@ from django.shortcuts import render
 
 def first(request):
     return render(request, "first.htm")
+
 def second(request):
     return render(request, "second.htm")
+
 def third(request):
     return render(request, "third.htm")
+
 
 
 
