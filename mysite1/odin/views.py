@@ -196,6 +196,13 @@ def set(request):
     response.set_cookie("username", username)
     return response   
 
+# получение куки
+def get(request):
+    # получаем куки с ключом username
+    username = request.COOKIES["username"]
+    return HttpResponse(f"Hello {username}")
+
+
 
 
 

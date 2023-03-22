@@ -127,8 +127,10 @@ urlpatterns = [
 #Гл.2, часть 10
 # установка куки
 
-     path("set", views.set),
-
+    path("set", views.set),
+    
+# получение куки    
+    path("get", views.get),       
 
 ]
 
