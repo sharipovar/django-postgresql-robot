@@ -142,5 +142,12 @@ urlpatterns = [
     path("second/", views.second),
 
     path("third/", views.third),
+
+#Гл.3, часть 2 
+# Передача данных в Шаблоны
+
+    path("first1/", views.first1),
+
     
 ]
+

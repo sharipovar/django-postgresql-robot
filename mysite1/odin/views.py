@@ -215,6 +215,13 @@ def second(request):
 def third(request):
     return render(request, "third.htm")
 
+#Гл.3, часть 2 
+# Передача данных в Шаблоны
+
+def first1(request):
+    data = {"header": "Привет!", "message": "Добро пожаловать!"}
+    return render(request, "first1.html", context=data)
+
 
 
 
