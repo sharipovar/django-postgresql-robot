@@ -222,7 +222,16 @@ def first1(request):
     data = {"header": "Привет!", "message": "Добро пожаловать!"}
     return render(request, "first1.html", context=data)
 
+# Передача сложных данных в Шаблоны
 
+def fourth(request):
+    header = "Данные пользователя"              # обычная переменная
+    langs = ["Python", "Java", "C#"]            # список
+    user ={"name" : "Tom", "age" : 23}          # словарь
+    address = ("Абрикосовая", 23, 45)           # кортеж
+  
+    data = {"header": header, "langs": langs, "user": user, "address": address}
+    return render(request, "fourth.html", context=data)
 
 
 

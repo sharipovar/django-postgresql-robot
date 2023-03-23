@@ -148,6 +148,9 @@ urlpatterns = [
 
     path("first1/", views.first1),
 
-    
+# Передача сложных данных в Шаблоны
+
+    path("fourth/", views.fourth)
+
 ]
 
