@@ -233,5 +233,15 @@ def fourth(request):
     data = {"header": header, "langs": langs, "user": user, "address": address}
     return render(request, "fourth.html", context=data)
 
+#передача объектов классов
+
+def fifth(request):
+    return render(request, "fifth.html", context = {"person": Person("Tom")})
+ 
+class Person:
+  
+    def __init__(self, name):
+        self.name = name    # имя человека
+
 
 

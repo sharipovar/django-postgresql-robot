@@ -150,7 +150,11 @@ urlpatterns = [
 
 # Передача сложных данных в Шаблоны
 
-    path("fourth/", views.fourth)
+    path("fourth/", views.fourth),
+
+#передача объектов классов
+
+    path("fifth/", views.fifth),
 
 ]
 
