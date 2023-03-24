@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Django on METANIT.COM</title>
+</head>
+<body>
+<H4> ПЕРВЫЙ </H4>
+    <div>
+{% with message="Hello" %}
+    <h2>{{ message|add:" Django" }}</h2>
+{% endwith %}
+    </div>
+
+<div>
+{% with message="Я был дома" %}
+    {{ message|cut:"был" }}
+{% endwith %}
+</div>
+
+{% with message="django" %}
+    {{ message|capfirst }}
+{% endwith %}
+
+
+</body>
+</html>

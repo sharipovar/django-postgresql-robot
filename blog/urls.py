@@ -159,8 +159,11 @@ urlpatterns = [
 
 #Гл.3, часть 3
 #встроенные теги шаблонов
-
     path("date/", views.date),
+
+#фильтры шаблонов
+    path("filtr_shab/", views.filtr_shab),
+
 
 ]
 

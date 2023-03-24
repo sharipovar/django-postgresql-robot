@@ -249,6 +249,10 @@ class Person:
 def date(request):
     return render(request, "date.html")     
 
+#фильтр шаблонов
+
+def filtr_shab(request):
+    return render(request, "filtr_shab.html")     
 
 
 
