@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Django on METANIT.COM</title>
+</head>
+<body>
+<H4>проверка значения </H4>
+
+    <div>
+{% with isEnabled=False %}
+    {{ isEnabled|default:"ложь" }}
+{% endwith %}
+    </div>
+
+<div>
+{% with name="" %}
+    {{ name|default:"пусто" }}
+{% endwith %}
+</div>
+
+<div>
+{% with user=None %}
+    {{ user|default_if_none:"None" }}
+{% endwith %}
+</div>
+
+</body>
+</html>

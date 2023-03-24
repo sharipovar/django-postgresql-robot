@@ -247,13 +247,15 @@ class Person:
 #встроенные теги шаблонов
 
 def date(request):
-    return render(request, "date.html")     
-
+    return render(request, "date.html") 
+    
+#Гл.3, часть 4
 #фильтр шаблонов
 
 def filtr_shab(request):
     return render(request, "filtr_shab.html")     
 
-
-
+#проверка значения
+def valid(request):
+    return render(request, "valid.html") 
 

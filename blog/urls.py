@@ -161,9 +161,12 @@ urlpatterns = [
 #встроенные теги шаблонов
     path("date/", views.date),
 
+#Гл.3, часть 4
 #фильтры шаблонов
     path("filtr_shab/", views.filtr_shab),
 
+#проверка значения
+    path("valid/", views.valid),
 
 ]
 
