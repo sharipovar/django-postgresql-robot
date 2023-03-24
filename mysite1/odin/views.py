@@ -243,5 +243,13 @@ class Person:
     def __init__(self, name):
         self.name = name    # имя человека
 
+#Гл.3, часть 3
+#встроенные теги шаблонов
+
+def date(request):
+    return render(request, "date.html")     
+
+
+
 
 

@@ -156,5 +156,11 @@ urlpatterns = [
 
     path("fifth/", views.fifth),
 
+
+#Гл.3, часть 3
+#встроенные теги шаблонов
+
+    path("date/", views.date),
+
 ]
 
