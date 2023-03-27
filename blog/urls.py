@@ -168,5 +168,10 @@ urlpatterns = [
 #проверка значения
     path("valid/", views.valid),
 
+#Гл.3, часть 5
+#статические файлы
+    
+    path("stat_file/", views.stat_file),
+    path("cat/", views.cat),
 ]
 

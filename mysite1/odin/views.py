@@ -259,3 +259,10 @@ def filtr_shab(request):
 def valid(request):
     return render(request, "valid.html") 
 
+#Гл.3, часть 5
+#статические файлы
+def stat_file(request):
+    return render(request, "stat_file.html") 
+
+def cat(request):
+    return render(request, "cat.html")    
