@@ -174,7 +174,7 @@ urlpatterns = [
     path("stat_file/", views.stat_file),
     path("cat/", views.cat),
 
-#Гл.3, часть 5
+#Гл.3, часть 6
 #TemplateView
 
     path("hello/", TemplateView.as_view(template_name="hello.html")),
@@ -182,6 +182,12 @@ urlpatterns = [
     path("task/", TemplateView.as_view(template_name="task.html", 
         extra_context={"task": "Выполнить всё по инструкции!"})),
 
-    
+#Гл.3, часть 7
+#Конфигурация шаблонов
+
+    path("first2/", views.first2),
+
+    path("first3/", views.first3),
+
 ]
 

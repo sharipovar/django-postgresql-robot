@@ -266,3 +266,14 @@ def stat_file(request):
 
 def cat(request):
     return render(request, "cat.html")    
+
+#Гл.3, часть 7
+#Конфигурация шаблонов
+
+#в mysite1
+def first2(request):
+    return render(request, "first2.html")  
+
+#в odin
+def first3(request):
+    return render(request, "first3.html")  

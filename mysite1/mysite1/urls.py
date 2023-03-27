@@ -52,4 +52,6 @@ urlpatterns = [
 
     path('stih', views.stih),
 
+    
+ 
 ]
