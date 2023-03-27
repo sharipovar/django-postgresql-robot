@@ -4,7 +4,7 @@ from . import views
 
 from mysite1.odin import views
 
-
+from  django.views.generic import TemplateView
 
 
 """
@@ -173,5 +173,15 @@ urlpatterns = [
     
     path("stat_file/", views.stat_file),
     path("cat/", views.cat),
+
+#Гл.3, часть 5
+#TemplateView
+
+    path("hello/", TemplateView.as_view(template_name="hello.html")),
+
+    path("task/", TemplateView.as_view(template_name="task.html", 
+        extra_context={"task": "Выполнить всё по инструкции!"})),
+
+    
 ]
 
