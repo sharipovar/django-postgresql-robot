@@ -189,5 +189,12 @@ urlpatterns = [
 
     path("first3/", views.first3),
 
+#Гл.3, часть 8
+#расширение шаблонов и фильтр extend
+
+    path("glav/", views.glav),
+    path("contacts/", views.contacts),
+    path("stih/", views.stih),
+
 ]
 

@@ -33,7 +33,6 @@ def mir(request,first,second):
     """)
 
 
-
 def mir2(request):
     return HttpResponse("Здравствуй, МИР!!!")
 
@@ -43,14 +42,11 @@ def mir3(request):
     output+="МИРУ МИР!!!"
     return HttpResponse(output)
 
-
-
 def stishok(request):
     
     with open('stishok.txt', 'r') as file:
         read_file = file.read()
     return (read_file)
-
 
 
 def index(request):
@@ -64,7 +60,6 @@ def about1(request, name, age):
     """)    
 
 #Гл.2, часть 5
-
 def oppar(request, name):
     return HttpResponse(f"<h2>Имя: {name}</h2>")
     
@@ -81,7 +76,6 @@ def oppar4_1(request, name="Undefined", age =0):
     return HttpResponse(f"<h2>Имя: {name}  Возраст: {age}</h2>")
 
 #Гл.2, часть 6_1
-
 def products(request):
     return HttpResponse("Список товаров")
  
@@ -93,7 +87,6 @@ def top(request):
 
 
 #Гл.2, часть 6_2
-
 def products(request, id):
     return HttpResponse(f"Товар {id}")
  
@@ -105,16 +98,13 @@ def questions(request, id):
 
 #Гл.2, часть 7
 # значения по умолчанию определены
-
 def user(request):
     age = request.GET.get("age", 0)
     name = request.GET.get("name", "Не известно")
     return HttpResponse(f"<h2>Имя: {name}  Возраст: {age}</h2>")
 
-
 #Гл.2, часть 8
 # переадресация 
-
 from django.http import  HttpResponseRedirect, HttpResponsePermanentRedirect 
 
 """
@@ -133,7 +123,6 @@ def details(request):
     return HttpResponsePermanentRedirect("/")
 
 #  отправка статусных кодов
-
 def index1(request, id):
     people = ["Tom", "Bob", "Sam"]
     # если пользователь найден, возвращаем его
@@ -155,14 +144,12 @@ def access(request, age):
         return HttpResponseForbidden("Доступ заблокирован: недостаточно лет")
 
 #Гл.2, часть 9
-
 from django.http import JsonResponse
  
 def index2(request):
     return JsonResponse({"name": "Tom", "age": 38})
 
 #определение класса-сериализатора
-
 from django.http import JsonResponse
 from django.core.serializers.json import DjangoJSONEncoder
  
@@ -184,9 +171,7 @@ class PersonEncoder(DjangoJSONEncoder):
         return super().default(obj)
     
 #Гл.2, часть 10
-
 # установка куки
-
 def set(request):
     # получаем из строки запроса имя пользователя
     username = request.GET.get("username", "Undefined")
@@ -203,7 +188,6 @@ def get(request):
     return HttpResponse(f"Hello {username}")
 
 #Гл.3, часть 1 Шаблоны
-
 from django.shortcuts import render
 
 def first(request):
@@ -217,13 +201,11 @@ def third(request):
 
 #Гл.3, часть 2 
 # Передача данных в Шаблоны
-
 def first1(request):
     data = {"header": "Привет!", "message": "Добро пожаловать!"}
     return render(request, "first1.html", context=data)
 
 # Передача сложных данных в Шаблоны
-
 def fourth(request):
     header = "Данные пользователя"              # обычная переменная
     langs = ["Python", "Java", "C#"]            # список
@@ -234,7 +216,6 @@ def fourth(request):
     return render(request, "fourth.html", context=data)
 
 #передача объектов классов
-
 def fifth(request):
     return render(request, "fifth.html", context = {"person": Person("Tom")})
  
@@ -245,13 +226,11 @@ class Person:
 
 #Гл.3, часть 3
 #встроенные теги шаблонов
-
 def date(request):
     return render(request, "date.html") 
     
 #Гл.3, часть 4
 #фильтр шаблонов
-
 def filtr_shab(request):
     return render(request, "filtr_shab.html")     
 
@@ -277,3 +256,16 @@ def first2(request):
 #в odin
 def first3(request):
     return render(request, "first3.html")  
+
+#Гл.3, часть 8
+#расширение шаблонов и фильтр extend
+def glav(request):
+    return render(request, "glav.html")
+ 
+def contacts(request):
+    return render(request, "contacts.html")
+
+def stih(request):
+    return render(request, "stih.html")
+
+
