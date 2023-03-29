@@ -201,7 +201,7 @@ urlpatterns = [
     path("glav1/", views.glav1),
     path("glav2/", views.glav2),
     path("glav3/", views.glav3),
-
-
+#передача данных
+    path("glav4/", views.glav4),
 ]
 

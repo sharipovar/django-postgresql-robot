@@ -276,4 +276,9 @@ def glav2(request):
     return render(request, "glav2.html")
 def glav3(request):
     return render(request, "glav3.html")
+#передача данных
+def glav4(request):
+    return render(request, "glav4.html")
+
+
  
