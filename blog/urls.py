@@ -196,5 +196,12 @@ urlpatterns = [
     path("contacts/", views.contacts),
     path("stih/", views.stih),
 
+#Гл.3, часть 9
+#вложенные шаблоны и фильтр include
+    path("glav1/", views.glav1),
+    path("glav2/", views.glav2),
+    path("glav3/", views.glav3),
+
+
 ]
 

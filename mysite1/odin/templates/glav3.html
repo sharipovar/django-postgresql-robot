@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Django on METANIT.COM</title>
+</head>
+<body>
+<h2>Главная страница</h2>
+{% with template_name="banner1.html"%}
+{% include template_name  %}
+<p>Good night mother,</p>
+<p>Good night father,</p>
+<p>Kiss your little son.</p>
+<p>Good night sister,</p>
+<p>Good night brother,</p>
+<p>Good night everyone.</p>
+<ul>Спокойной ночи мама,<br>
+Спокойной ночи отец,<br>
+Поцелуй своего маленького сына.<br>
+Спокойной ночи сестра,<br>
+Спокойной ночи брат,<br>
+Спокойной ночи всем.</ul>
+{%endwith%}
+</body>
+</html>

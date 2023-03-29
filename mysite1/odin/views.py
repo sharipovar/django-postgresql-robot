@@ -268,4 +268,12 @@ def contacts(request):
 def stih(request):
     return render(request, "stih.html")
 
-
+#Гл.3, часть 9
+#вложенные шаблоны и фильтр include
+def glav1(request):
+    return render(request, "glav1.html")
+def glav2(request):
+    return render(request, "glav2.html")
+def glav3(request):
+    return render(request, "glav3.html")
+ 
