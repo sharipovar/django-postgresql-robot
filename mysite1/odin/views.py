@@ -322,3 +322,14 @@ def postuser_s(request):
                 <div>Languages: {langs}</div>
             """)                             
                         
+#Гл.4, часть 2
+#Определение форм Django
+
+from django.shortcuts import render
+from .forms import UserForm
+ 
+def opr_f(request):
+    userform = UserForm()
+    return render(request, "opr_f.html", {"form": userform})
+
+

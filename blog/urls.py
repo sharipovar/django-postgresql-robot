@@ -217,5 +217,9 @@ urlpatterns = [
     path("st_for_sel/", views.st_for_sel),
     path("postuser_s/", views.postuser_s),
     
+    
+#Гл.4, часть 2
+#Определение форм Django
+    path("opr_f/", views.opr_f),
+    
 ]
-
