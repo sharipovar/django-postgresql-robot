@@ -208,5 +208,11 @@ urlpatterns = [
 #отправка стандартных форм
     path("st_for/", views.st_for),
     path("postuser/", views.postuser),
+
+#получение массивов
+    path("st_for_mas/", views.st_for_mas),
+    path("postuser_m/", views.postuser_m),
+
+    
 ]
 

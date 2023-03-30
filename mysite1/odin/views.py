@@ -290,3 +290,18 @@ def postuser(request):
     name = request.POST.get("name", "Undefined")
     age = request.POST.get("age", 1)
     return HttpResponse(f"<h2>Name: {name}  Age: {age}</h2>")
+
+#получение массивов
+def st_for_mas(request):
+    return render(request, "st_for_mas.html")
+                  
+def postuser_m(request):
+    # получаем из строки запроса имя пользователя
+    name = request.POST.get("name", "Undefined")
+    age = request.POST.get("age", 1)
+    langs = request.POST.getlist("languages", ["python"])
+     
+    return HttpResponse(f"""
+                <div>Name: {name}  Age: {age}<div>
+                <div>Languages: {langs}</div>
+            """)
