@@ -294,6 +294,7 @@ def postuser(request):
 #получение массивов
 def st_for_mas(request):
     return render(request, "st_for_mas.html")
+    return render(request, "st_for_mas.html")
                   
 def postuser_m(request):
     # получаем из строки запроса имя пользователя
@@ -304,4 +305,20 @@ def postuser_m(request):
     return HttpResponse(f"""
                 <div>Name: {name}  Age: {age}<div>
                 <div>Languages: {langs}</div>
-            """)
+            """)                       
+#множественный выбор
+def st_for_sel(request):
+    return render(request, "st_for_sel.html")
+    return render(request, "st_for_mas.html")
+                  
+def postuser_s(request):
+    # получаем из строки запроса имя пользователя
+    name = request.POST.get("name", "Undefined")
+    age = request.POST.get("age", 1)
+    langs = request.POST.getlist("languages", ["python"])
+     
+    return HttpResponse(f"""
+                <div>Name: {name}  Age: {age}<div>
+                <div>Languages: {langs}</div>
+            """)                             
+                        

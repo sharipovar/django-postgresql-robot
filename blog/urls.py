@@ -213,6 +213,9 @@ urlpatterns = [
     path("st_for_mas/", views.st_for_mas),
     path("postuser_m/", views.postuser_m),
 
+#множественный выбор
+    path("st_for_sel/", views.st_for_sel),
+    path("postuser_s/", views.postuser_s),
     
 ]
 
