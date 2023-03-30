@@ -280,5 +280,13 @@ def glav3(request):
 def glav4(request):
     return render(request, "glav4.html")
 
-
+#Гл.4, часть 1
+#отправка стандартных форм
+def st_for(request):
+    return render(request, "st_for.html")
  
+def postuser(request):
+    # получаем из данных запроса POST отправленные через форму данные
+    name = request.POST.get("name", "Undefined")
+    age = request.POST.get("age", 1)
+    return HttpResponse(f"<h2>Name: {name}  Age: {age}</h2>")

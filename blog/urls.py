@@ -203,5 +203,10 @@ urlpatterns = [
     path("glav3/", views.glav3),
 #передача данных
     path("glav4/", views.glav4),
+
+#Гл.4, часть 1
+#отправка стандартных форм
+    path("st_for/", views.st_for),
+    path("postuser/", views.postuser),
 ]
 
