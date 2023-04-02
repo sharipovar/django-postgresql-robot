@@ -225,5 +225,8 @@ urlpatterns = [
 #Получение POST-запроса
     path("opr_POST/", views.opr_POST),
    
-    
+#Гл.4, часть 4
+#Настройка вида формы Django  
+    path("nastr_form/", views.nastr_form),
+
 ]

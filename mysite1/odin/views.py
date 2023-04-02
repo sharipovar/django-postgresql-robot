@@ -345,3 +345,11 @@ def opr_POST(request):
     else:
         userform = UserForm()
         return render(request, "opr_POST.html", {"form": userform})
+    
+#Гл.4, часть 4
+#Настройка вида формы Django  
+def nastr_form(request):
+    userform = UserForm()
+    return render(request, "nastr_form.html", {"form": userform})
+
+
